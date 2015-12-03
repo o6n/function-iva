@@ -6,8 +6,6 @@
 		$scorporo = (is_bool($scorporo) === true) ? $scorporo : false;
 		$iva = (is_int($iva) and ($iva >= 0 && $iva <= 100)) ? $iva : die('ERRORE: iva');
 
-		//$prezzo = (0 =< is_int($args[0]) => 100 ? $args[0] : $prezzo + ($prezzo * ($calc)));
-
 		$calc = $prezzo * ($iva / 100);
 
 		$totale = ($scorporo === true) ? $calc : $prezzo + ($calc);
